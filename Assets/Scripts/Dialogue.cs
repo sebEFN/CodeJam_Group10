@@ -12,19 +12,17 @@ public TextEffect colorEffect;
 
  void Start()
     {
-        colorEffect.StartManualEffects();
     }
     
     
 public void nextText()
     {
-            placeholder.text = "HERE is my new message";
-            //colorEffect.StopAllEffects();
             colorEffect.StartManualEffects();
+            placeholder.text = "WTF! I.. where the fuck am i?!";  
+            
     }
     public void RefreshText()
     {
-            //colorEffect.StopAllEffects();
             colorEffect.StartManualEffects();
     }
 

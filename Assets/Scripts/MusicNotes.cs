@@ -7,12 +7,14 @@ public class MusicNotes : MonoBehaviour
     public Transform target;
 
     private Rhythm rhythm;
+
     private Vector3 spawnPos;
     private Vector3 targetPos;
 
     void Start()
     {
         rhythm = FindObjectOfType<Rhythm>();
+
         spawnPos = transform.position;
         targetPos = target.position;
     }
@@ -26,13 +28,14 @@ public class MusicNotes : MonoBehaviour
         float progress = (songTime - spawnTime) / noteTravelTime;
         progress = Mathf.Clamp01(progress);
 
-        // update target position (safe if it moves)
         if (target != null)
             targetPos = target.position;
 
         transform.position = Vector3.Lerp(spawnPos, targetPos, progress);
 
         if (songTime > HitTime + 0.5f)
+        {
             Destroy(gameObject);
+        }
     }
 }

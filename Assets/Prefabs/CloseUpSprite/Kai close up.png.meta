@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 95dbf30b4682446419ea2d413bf5d1c5
+guid: 2748ff420df251d438a613a845df5f80
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1180695292124033864
-    second: tall-skyline_0
+      213: 7655384431173516710
+    second: Kai close up_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tall-skyline_0
+      name: Kai close up_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 0
-        width: 400
-        height: 240
+        width: 88
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8bc88fc23e35d9fe0800000000000000
-      internalID: -1180695292124033864
+      spriteID: 6ad372784936d3a60800000000000000
+      internalID: 7655384431173516710
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tall-skyline_0: -1180695292124033864
+      Kai close up_0: 7655384431173516710
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

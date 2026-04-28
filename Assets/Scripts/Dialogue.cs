@@ -16,7 +16,11 @@ private int i = 0;
 private int j = 0;
 private int k = 0;
 private int t = 0;
-[SerializeField] DialogueData guy;
+
+public GameObject AnibaOB;
+public GameObject KaiOB;
+
+    [SerializeField] DialogueData guy;
 
  void Start()
         {
@@ -66,7 +70,8 @@ public void MainGuydia()
 
     public void AnibaDia()
     {
-                if (k <= guy.aniba.Length)
+        Debug.Log("aniba");
+        if (k < guy.aniba.Length)
                 {
                         placeholder.text = guy.aniba[k];
                         k++;
@@ -89,4 +94,49 @@ public void MainGuydia()
             
     }
 
-}
+    public void MainGuydiaTwo()
+    {
+        if (i+7 < guy.mainGuy.Length)
+        {
+            placeholder.text = guy.mainGuy[i+7];
+            i++;
+            Debug.Log(i);
+            colorEffect.Refresh();
+            colorEffect.StartManualEffects();
+            talk.Play(0);
+        }
+        else
+        {
+            Debug.Log("finished");
+        }
+
+    }
+
+    public void KaiDiaTwo()
+    {
+
+        if (j + 7 < guy.kai.Length)
+        {
+            placeholder.text = guy.kai[j + 7];
+            Debug.Log(j);
+            colorEffect.Refresh();
+            colorEffect.StartManualEffects();
+            talk.Play(0);
+            if (j == 1)
+            {
+                audioData.Play(0);
+            }
+            j++;
+        }
+
+        else
+        {
+            AnibaOB.SetActive(true);
+            KaiOB.SetActive(false);
+            AnibaDia();    
+        }
+    }
+
+
+
+    }

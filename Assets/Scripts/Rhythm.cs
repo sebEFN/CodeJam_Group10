@@ -9,6 +9,8 @@ public class Rhythm : MonoBehaviour
     //The beats per minute the song has that we're trying to sync up to.
     public float SongBpm;
 
+    public float noteTravelTime = 2f;
+
     //the number of seconds for each song beat
     public float SecPerBeat;
 
@@ -25,6 +27,10 @@ public class Rhythm : MonoBehaviour
 
     //an AudioSource attached to this GameObject that will play the music. 
     public AudioSource musicSource;
+
+    public Transform Spawnpoint; 
+
+    public Transform targetTransform;
 
     //keep all the position-in-beats of notes in the song
     float[] notes;
@@ -75,17 +81,17 @@ public class Rhythm : MonoBehaviour
         //calculate the number of seconds in each beat
         SecPerBeat = 60f/SongBpm;
 
-        //record the time when the music starts
-        dspSongTime = (float)AudioSettings.dspTime;
-
         //Load Osu! beatmap into the notes array in seconds
         string path = Path.Combine(Application.dataPath, "Resources/GameJamFinal.osu");
+        path = path.Replace("/","\\" );
         Debug.Log(path);
         notes = LoadOsuNotes(path);
         Debug.Log("Notes Loaded: " + notes.Length);
-
-        //start the music
-        musicSource.Play();
+        
+        //schedule the music and align song timing to the actual start time
+        double startTime = AudioSettings.dspTime + 0.1;
+        dspSongTime = (float)startTime;
+        musicSource.PlayScheduled(startTime);
 
 
     }
@@ -99,9 +105,14 @@ public class Rhythm : MonoBehaviour
         //determine how many beats since the song started
         SongPositionInBeats = SongPosition/SecPerBeat;
 
-        if (nextIndex < notes.Length && notes[nextIndex] < SongPosition + beatsShownInAdvance)
+        if (nextIndex < notes.Length && SongPosition >= notes[nextIndex] - noteTravelTime)
             {
-                Instantiate(MusicNotePrefab, new Vector3(0f, 10f, 0f), Quaternion.identity);
+                GameObject note = Instantiate(MusicNotePrefab, Spawnpoint.position, Quaternion.identity);
+
+                MusicNotes noteScript = note.GetComponent<MusicNotes>();
+                noteScript.HitTime = notes[nextIndex];
+                noteScript.target = targetTransform;
+                noteScript.noteTravelTime = noteTravelTime;
 
                 //initialize the fields of the music note
                 nextIndex++;

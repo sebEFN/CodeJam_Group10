@@ -8,10 +8,4 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("FirstScene");
     }
 
-    public void QuitGame()
-    {
-        Application.Quit();  
-    }
-    
-
 }

@@ -11,6 +11,7 @@ public class Dialogue : MonoBehaviour
 public TextMeshProUGUI placeholder;
 public TextEffect colorEffect;
 AudioSource audioData;
+public AudioSource talk;
 private int i = 0;
 private int j = 0;
 private int k = 0;
@@ -33,6 +34,7 @@ public void MainGuydia()
                         Debug.Log(i);
                         colorEffect.Refresh();
             colorEffect.StartManualEffects();
+           talk.Play(0);
                 }
         else
         {
@@ -49,6 +51,7 @@ public void MainGuydia()
                         Debug.Log(j);
                         colorEffect.Refresh();
             colorEffect.StartManualEffects();
+            talk.Play(0);
             if (j == 1)
             {
                 audioData.Play(0);

@@ -79,7 +79,6 @@ public void MainGuydia()
                         k++;
                         colorEffect.Refresh();
             colorEffect.StartManualEffects();
-            talk.pitch = 3;
             talk.Play(0);
                 }
             else
@@ -112,7 +111,6 @@ public void MainGuydia()
                         placeholder.text = guy.ai[t];
                                 colorEffect.Refresh();
             colorEffect.StartManualEffects();
-            talk.pitch = -1;
             talk.Play(0);
                 }
         else
@@ -156,7 +154,7 @@ public void MainGuydia()
         {
             AnibaOB.SetActive(true);
             KaiOB.SetActive(false);
-            AnibaDia();   
+            AnibaDia();    
         }
     }
 public void MainGuydiathree()
@@ -172,7 +170,7 @@ public void MainGuydiathree()
                 }
         else
         {
-            SceneManager.LoadScene("FourthScene");
+             SceneManager.LoadScene("FourthScene");
         }
     }
 

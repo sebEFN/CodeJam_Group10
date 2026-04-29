@@ -80,18 +80,32 @@ public void MainGuydia()
                 }
             
     }
+    public void AnibaDiatwo()
+    {
+        Debug.Log("aniba");
+        if (k+5 < guy.aniba.Length)
+                {
+                        placeholder.text = guy.aniba[k+5];
+                        k++;
+                        colorEffect.Refresh();
+            colorEffect.StartManualEffects();
+                }
+            
+    }
 
     public void AmalAI()
     {
 
-                if (t <= guy.ai.Length)
+                if (t <= guy.ai.Length && i+17 >= guy.mainGuy.Length)
                 {
                         placeholder.text = guy.ai[t];
-                        t++;
                                 colorEffect.Refresh();
             colorEffect.StartManualEffects();
                 }
-            
+        else
+        {
+            Debug.Log("meow");
+        }
     }
 
     public void MainGuydiaTwo()
@@ -132,7 +146,42 @@ public void MainGuydia()
             AnibaDia();    
         }
     }
+public void MainGuydiathree()
+    {
+                if (i+14 < guy.mainGuy.Length)
+                {
+                        placeholder.text = guy.mainGuy[i+14];
+                        i++;
+                        Debug.Log(i);
+                        colorEffect.Refresh();
+            colorEffect.StartManualEffects();
+           talk.Play(0);
+                }
+        else
+        {
+            Debug.Log("finished");
+        }
+    }
 
+    public void MainGuydiaFour()
+    {
+                if (i+15 < guy.mainGuy.Length)
+                {
+                        placeholder.text = guy.mainGuy[i+15];
+                        i++;
+                        Debug.Log(i);
+                        colorEffect.Refresh();
+            colorEffect.StartManualEffects();
+           talk.Play(0);
+                }
+        else
+        {
+            i++;
+            AnibaOB.SetActive(true);
+            KaiOB.SetActive(false);
+            
+        }
 
 
     }
+}

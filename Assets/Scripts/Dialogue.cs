@@ -122,10 +122,6 @@ public void MainGuydia()
             colorEffect.Refresh();
             colorEffect.StartManualEffects();
             talk.Play(0);
-            if (j == 1)
-            {
-                audioData.Play(0);
-            }
             j++;
         }
 

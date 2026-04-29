@@ -79,6 +79,7 @@ public void MainGuydia()
                         k++;
                         colorEffect.Refresh();
             colorEffect.StartManualEffects();
+            talk.Play(0);
                 }
             else
             {
@@ -94,6 +95,7 @@ public void MainGuydia()
                         k++;
                         colorEffect.Refresh();
             colorEffect.StartManualEffects();
+            talk.Play(0);
                 }
             else
             {
@@ -109,6 +111,7 @@ public void MainGuydia()
                         placeholder.text = guy.ai[t];
                                 colorEffect.Refresh();
             colorEffect.StartManualEffects();
+            talk.Play(0);
                 }
         else
         {

@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class Dialogue : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public GameObject KaiOB;
     
 public void MainGuydia()
     {
-                if (i < guy.mainGuy.Length)
+                if (i < 7)
                 {
                         placeholder.text = guy.mainGuy[i];
                         i++;
@@ -42,14 +43,14 @@ public void MainGuydia()
                 }
         else
         {
-            Debug.Log("finished");
+            
         }
             
     }
     public void KaiDia()
     {
         
-                if (j < guy.kai.Length)
+                if (j < 7)
                 {
                         placeholder.text = guy.kai[j];
                         Debug.Log(j);
@@ -65,6 +66,7 @@ public void MainGuydia()
             else
         {
             Debug.Log("finished");
+            SceneManager.LoadScene("SecondScene");
         }
     }
 
@@ -96,7 +98,7 @@ public void MainGuydia()
     public void AmalAI()
     {
 
-                if (t <= guy.ai.Length && i+17 >= guy.mainGuy.Length)
+                if (t <= guy.ai.Length && i+18 >= guy.mainGuy.Length)
                 {
                         placeholder.text = guy.ai[t];
                                 colorEffect.Refresh();
@@ -148,9 +150,9 @@ public void MainGuydia()
     }
 public void MainGuydiathree()
     {
-                if (i+14 < guy.mainGuy.Length)
+                if (i+15 < guy.mainGuy.Length)
                 {
-                        placeholder.text = guy.mainGuy[i+14];
+                        placeholder.text = guy.mainGuy[i+15];
                         i++;
                         Debug.Log(i);
                         colorEffect.Refresh();
@@ -165,9 +167,9 @@ public void MainGuydiathree()
 
     public void MainGuydiaFour()
     {
-                if (i+15 < guy.mainGuy.Length)
+                if (i+16 < guy.mainGuy.Length)
                 {
-                        placeholder.text = guy.mainGuy[i+15];
+                        placeholder.text = guy.mainGuy[i+16];
                         i++;
                         Debug.Log(i);
                         colorEffect.Refresh();

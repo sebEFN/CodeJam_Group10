@@ -73,14 +73,17 @@ public void MainGuydia()
     public void AnibaDia()
     {
         Debug.Log("aniba");
-        if (k < guy.aniba.Length)
+        if (k < 5)
                 {
                         placeholder.text = guy.aniba[k];
                         k++;
                         colorEffect.Refresh();
             colorEffect.StartManualEffects();
                 }
-            
+            else
+            {
+                 SceneManager.LoadScene("thirdScene");
+            }
     }
     public void AnibaDiatwo()
     {
@@ -92,7 +95,10 @@ public void MainGuydia()
                         colorEffect.Refresh();
             colorEffect.StartManualEffects();
                 }
-            
+            else
+            {
+               
+            }
     }
 
     public void AmalAI()

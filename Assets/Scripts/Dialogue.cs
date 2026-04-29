@@ -79,6 +79,7 @@ public void MainGuydia()
                         k++;
                         colorEffect.Refresh();
             colorEffect.StartManualEffects();
+            talk.Play(0);
                 }
             else
             {
@@ -94,6 +95,7 @@ public void MainGuydia()
                         k++;
                         colorEffect.Refresh();
             colorEffect.StartManualEffects();
+            talk.Play(0);
                 }
             else
             {
@@ -109,6 +111,7 @@ public void MainGuydia()
                         placeholder.text = guy.ai[t];
                                 colorEffect.Refresh();
             colorEffect.StartManualEffects();
+            talk.Play(0);
                 }
         else
         {
@@ -156,7 +159,7 @@ public void MainGuydia()
     }
 public void MainGuydiathree()
     {
-                if (i+15 < guy.mainGuy.Length)
+                if (i+15 < 16)
                 {
                         placeholder.text = guy.mainGuy[i+15];
                         i++;
@@ -167,7 +170,7 @@ public void MainGuydiathree()
                 }
         else
         {
-            Debug.Log("finished");
+             SceneManager.LoadScene("FourthScene");
         }
     }
 

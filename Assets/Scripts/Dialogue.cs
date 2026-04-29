@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class Dialogue : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public GameObject KaiOB;
     
 public void MainGuydia()
     {
-                if (i < guy.mainGuy.Length)
+                if (i < 7)
                 {
                         placeholder.text = guy.mainGuy[i];
                         i++;
@@ -42,14 +43,14 @@ public void MainGuydia()
                 }
         else
         {
-            Debug.Log("finished");
+            
         }
             
     }
     public void KaiDia()
     {
         
-                if (j < guy.kai.Length)
+                if (j < 7)
                 {
                         placeholder.text = guy.kai[j];
                         Debug.Log(j);
@@ -65,6 +66,7 @@ public void MainGuydia()
             else
         {
             Debug.Log("finished");
+            SceneManager.LoadScene("SecondScene");
         }
     }
 

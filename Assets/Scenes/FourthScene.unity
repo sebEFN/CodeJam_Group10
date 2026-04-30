@@ -1296,8 +1296,8 @@ MonoBehaviour:
   placeholder: {fileID: 1425491193}
   colorEffect: {fileID: 1425491192}
   talk: {fileID: 1425491191}
-  AnibaOB: {fileID: 1647930210}
-  KaiOB: {fileID: 1288710517}
+  AnibaOB: {fileID: 0}
+  KaiOB: {fileID: 0}
   guy: {fileID: 11400000, guid: 940d4eaa6f098523681a0c21c48aa5fe, type: 2}
 --- !u!82 &1425491191
 AudioSource:
@@ -1614,7 +1614,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1613904291
-  m_SortingLayer: -1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 689283645380311244, guid: cbd45cc89dec1624a8341cb53c79dae9, type: 3}
@@ -1622,7 +1622,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4, y: 2.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1659,7 +1659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1647930211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2107,8 +2107,8 @@ MonoBehaviour:
   placeholder: {fileID: 1752555603}
   colorEffect: {fileID: 1752555602}
   talk: {fileID: 1752555599}
-  AnibaOB: {fileID: 1647930210}
-  KaiOB: {fileID: 1288710517}
+  AnibaOB: {fileID: 0}
+  KaiOB: {fileID: 0}
   guy: {fileID: 11400000, guid: 940d4eaa6f098523681a0c21c48aa5fe, type: 2}
 --- !u!114 &1752555602
 MonoBehaviour:

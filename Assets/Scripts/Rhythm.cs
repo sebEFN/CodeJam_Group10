@@ -30,10 +30,21 @@ public class Rhythm : MonoBehaviour
 
     public Transform Spawnpoint; 
 
+<<<<<<< Updated upstream
     public Transform targetTransform;
 
     //keep all the position-in-beats of notes in the song
     float[] notes;
+=======
+       
+        musicSource.Play();
+    }
+
+    void Update()
+    {
+       
+        SongPosition = musicSource.time;
+>>>>>>> Stashed changes
 
     //the index of the next note to be spawned
     int nextIndex = 0;

@@ -286,7 +286,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1613904291
-  m_SortingLayer: -1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 689283645380311244, guid: cbd45cc89dec1624a8341cb53c79dae9, type: 3}
@@ -294,7 +294,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4, y: 2.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -350,7 +350,7 @@ MonoBehaviour:
   placeholder: {fileID: 236943870}
   colorEffect: {fileID: 236943869}
   talk: {fileID: 236943868}
-  AnibaOB: {fileID: 1043192522}
+  AnibaOB: {fileID: 0}
   KaiOB: {fileID: 0}
   guy: {fileID: 11400000, guid: 940d4eaa6f098523681a0c21c48aa5fe, type: 2}
 --- !u!82 &236943868
@@ -1213,7 +1213,7 @@ MonoBehaviour:
   placeholder: {fileID: 893429831}
   colorEffect: {fileID: 893429830}
   talk: {fileID: 893429829}
-  AnibaOB: {fileID: 1043192522}
+  AnibaOB: {fileID: 0}
   KaiOB: {fileID: 0}
   guy: {fileID: 11400000, guid: 940d4eaa6f098523681a0c21c48aa5fe, type: 2}
 --- !u!82 &893429829

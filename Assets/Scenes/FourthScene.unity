@@ -1296,8 +1296,8 @@ MonoBehaviour:
   placeholder: {fileID: 1425491193}
   colorEffect: {fileID: 1425491192}
   talk: {fileID: 1425491191}
-  AnibaOB: {fileID: 0}
-  KaiOB: {fileID: 0}
+  AnibaOB: {fileID: 1647930210}
+  KaiOB: {fileID: 1288710517}
   guy: {fileID: 11400000, guid: 940d4eaa6f098523681a0c21c48aa5fe, type: 2}
 --- !u!82 &1425491191
 AudioSource:
@@ -1659,7 +1659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1647930211
 MonoBehaviour:
   m_ObjectHideFlags: 0

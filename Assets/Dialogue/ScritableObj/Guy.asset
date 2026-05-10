@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e10df6ee3b794ba91873a0aee9f3c359, type: 3}
+  m_Name: Guy
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  mainGuy:
+  - WTF! I.. where the fuck am i?!
+  - 'HUh? Terms of condition? What are you talking about?? '
+  - "Wow.. Um\u2026 This can\u2019t be legal though! Like.. um isn\u2019t this like
+    abduction or something like that! "
+  - 'But nobody reads that shit! '
+  - "There\u2019s gotta be some way we can get back!  "
+  - "I\u2019ll do it "
+  - Moves!
+  - Yes! I did it!
+  - WHAT?!
+  - Any who?
+  - I'm ..
+  - Huh???
+  - I..
+  - Maybe make it more readable then, if you want the humans to read!
+  - jesus..let me just get it over with
+  - "oof, that was kinda hard\u2026 but nothing i couldn\u2019t beat "
+  - 'Right on! That''s how we humans do it! '
+  - 'Now tell me how I can return to my world and bring the others too! '
+  kai: []
+  aniba: []
+  ai: []

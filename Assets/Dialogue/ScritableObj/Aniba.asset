@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e10df6ee3b794ba91873a0aee9f3c359, type: 3}
+  m_Name: Aniba
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  mainGuy: []
+  kai: []
+  aniba:
+  - ' Ahh brother, who do we have here? '
+  - 'I already know all about you, Anon. '
+  - I know that you are really interested in dancing, but to get those songs you
+    so love to dance to, you have to download them and that always gives you the
+    terms and condition question.
+  - 'and that is why you are here now, trying to save your own skin and mankind.
+    But Anon did you stop to think that maybe humankind doesn''t want to be saved.
+    All of you just go about your day, without thinking of the action you take have
+    consequences.  '
+  - "What do you mean 21 pages isn\u2019t readable? "
+  - "You haven\u2019t even had a taste of the real thing!"
+  ai: []

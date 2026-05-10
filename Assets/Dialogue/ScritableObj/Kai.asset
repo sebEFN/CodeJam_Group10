@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e10df6ee3b794ba91873a0aee9f3c359, type: 3}
+  m_Name: Kai
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  mainGuy: []
+  kai:
+  - Anon, yo..
+  - "Humans\u2026tsk..typical\u2026 As I was just about to tell you, Anon you\u2019ve
+    come here because you have accepted too many terms of conditions pop ups and
+    now because of this we own you. "
+  - 'Let me remind you  '
+  - "It seems like you still don\u2019t get it. You agreed to the terms of condition,
+    that means we OWN you! All your information, all your Likes and Dislikes and
+    all your likeliness. "
+  - "We know, that\u2019s why we write this. We want to rule the world with our AI
+    bots."
+  - 'Of course! But nobody has ever cleared it before therefore humanity is doomed '
+  - " lowly human, i just told you that all the other humans couldn\u2019t defeat
+    me! What do you bring to the table? "
+  - 'HA! Do you really think we would be done by just one battle? You have 2 more
+    battles before you can get home '
+  - Calling Aniba!
+  aniba: []
+  ai: []

@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10df6ee3b794ba91873a0aee9f3c359, type: 3}
   m_Name: Ai
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  mainGuy: []
-  kai: []
-  aniba: []
-  ai:
+  guyName: Ai
+  mainGuy:
   - "NO!! How did 1 silly man defeat us AI\u2019s! My XP bar is too low! "

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10df6ee3b794ba91873a0aee9f3c359, type: 3}
   m_Name: Kai
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  mainGuy: []
-  kai:
+  guyName: Kai
+  mainGuy:
   - Anon, yo..
   - "Humans\u2026tsk..typical\u2026 As I was just about to tell you, Anon you\u2019ve
     come here because you have accepted too many terms of conditions pop ups and
@@ -30,5 +30,3 @@ MonoBehaviour:
   - 'HA! Do you really think we would be done by just one battle? You have 2 more
     battles before you can get home '
   - Calling Aniba!
-  aniba: []
-  ai: []

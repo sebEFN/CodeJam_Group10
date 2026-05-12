@@ -1,28 +1,25 @@
 using EasyTextEffects;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class GoodDialogue : MonoBehaviour
 {
-    public TextMeshProUGUI placeholder;
+    public TextMeshProUGUI DialogueText;
     public TextEffect colorEffect;
-    AudioSource audioData;
+    public AudioSource talk;
     [SerializeField] DialogueData guy;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    int who;
+    public void TheDialogue()
     {
-        
-    }
+         if (who < 0 || who >= guy.mainGuy.Length)
+            return;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        DialogueText.text = guy.mainGuy[who];
 
-    void TheDialogue()
-    {
-        
+        colorEffect.Refresh();
+        colorEffect.StartManualEffects();
+        talk.Play();
+        who++;
     }
 }

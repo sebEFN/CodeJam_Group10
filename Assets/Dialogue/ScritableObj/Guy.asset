@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10df6ee3b794ba91873a0aee9f3c359, type: 3}
   m_Name: Guy
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  guyName: Sykkuno
   mainGuy:
   - WTF! I.. where the fuck am i?!
   - 'HUh? Terms of condition? What are you talking about?? '
@@ -32,6 +33,3 @@ MonoBehaviour:
   - "oof, that was kinda hard\u2026 but nothing i couldn\u2019t beat "
   - 'Right on! That''s how we humans do it! '
   - 'Now tell me how I can return to my world and bring the others too! '
-  kai: []
-  aniba: []
-  ai: []

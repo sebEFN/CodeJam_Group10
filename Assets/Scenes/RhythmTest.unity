@@ -150,16 +150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rhythm
   MusicNotePrefab: {fileID: 737317582436499319, guid: 012dd628bd8bcef4c864a694d18f5bb4, type: 3}
-  SongBpm: 140
-  noteTravelTime: 4
-  SecPerBeat: 0
-  SongPosition: 0
-  SongPositionInBeats: 0
-  dspSongTime: 0
-  beatsShownInAdvance: 6
-  musicSource: {fileID: 59911319}
   Spawnpoint: {fileID: 2043703555}
   targetTransform: {fileID: 132887718}
+  musicSource: {fileID: 59911319}
+  noteTravelTime: 4
+  SongPosition: 0
 --- !u!4 &22574508
 Transform:
   m_ObjectHideFlags: 0

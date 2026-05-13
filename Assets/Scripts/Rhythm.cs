@@ -13,6 +13,9 @@ public class Rhythm : MonoBehaviour
     [Header("Song Settings")]
     public float noteTravelTime = 2f;
 
+    [Header("Calibration")]
+    public float globalOffset = 0.15f;
+
     [Header("Debug")]
     public float SongPosition;
 
@@ -35,7 +38,8 @@ public class Rhythm : MonoBehaviour
 
     void Update()
     {
-        SongPosition = musicSource.time;
+        // Apply offset calibration
+        SongPosition = musicSource.time - globalOffset;
 
         while (nextIndex < notes.Length &&
                SongPosition >= notes[nextIndex] - noteTravelTime)

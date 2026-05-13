@@ -6,6 +6,9 @@ public class MusicNotes : MonoBehaviour
     public float noteTravelTime;
     public Transform target;
 
+    [Header("SFX")]
+    public AudioClip missSfx;
+
     private Rhythm rhythm;
 
     private Vector3 spawnPos;
@@ -33,8 +36,13 @@ public class MusicNotes : MonoBehaviour
 
         transform.position = Vector3.Lerp(spawnPos, targetPos, progress);
 
-        if (songTime > HitTime + 0.5f)
+        if (songTime > HitTime + 0.1f)
         {
+            if (missSfx != null)
+            {
+                AudioSource.PlayClipAtPoint(missSfx, transform.position, 50f);
+            }
+
             Destroy(gameObject);
         }
     }

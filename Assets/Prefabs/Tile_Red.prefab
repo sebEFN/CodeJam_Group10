@@ -107,3 +107,4 @@ MonoBehaviour:
   HitTime: 0
   noteTravelTime: 0
   target: {fileID: 0}
+  missSfx: {fileID: 8300000, guid: eed8fafe2072f2c42b0cc0590dfb09f7, type: 3}

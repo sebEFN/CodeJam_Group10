@@ -15,14 +15,6 @@ MonoBehaviour:
   guyName: Sykkuno
   guyImage: {fileID: 5238824982713380836, guid: 40484d9530df91040890164ae3696aab, type: 3}
   mainGuy:
-  - WTF! I.. where the fuck am i?!
-  - 'HUh? Terms of condition? What are you talking about?? '
-  - "Wow.. Um\u2026 This can\u2019t be legal though! Like.. um isn\u2019t this like
-    abduction or something like that! "
-  - 'But nobody reads that shit! '
-  - "There\u2019s gotta be some way we can get back!  "
-  - "I\u2019ll do it "
-  - Moves!
   - Yes! I did it!
   - WHAT?!
   - Any who?

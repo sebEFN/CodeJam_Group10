@@ -6,5 +6,5 @@ public class DialogueData : ScriptableObject
 {
     public string guyName;
     public Sprite guyImage;
-    public string[] guyTalking;
+    public string[] mainGuy;
 }

@@ -29,7 +29,7 @@ public class GoodDialogue : MonoBehaviour
     {
         
         DialogueTurn turn = conversation[who];
-        dialogueText.text = turn.character.guyTalking[turn.lineIndex];
+        dialogueText.text = turn.character.mainGuy[turn.lineIndex];
         Image img = myGuy.GetComponent<Image>();
         img.sprite = turn.character.guyImage;
         colorEffect.Refresh();

@@ -1,0 +1,70 @@
+using UnityEngine;
+using Melanchall.DryWetMidi.Core;
+using Melanchall.DryWetMidi.Interaction;
+using System.IO;
+using UnityEngine.Networking;
+using System;
+public class SongManager : MonoBehaviour
+{
+    public static SongManager Instance;
+    public AudioSource audioSource;
+    public float songDelayInSeconds;
+    public double marginOfError; // in seconds
+    public int inputDelayInMilliseconds;
+
+
+    public string fileLocation;
+    public float noteTime;
+    public float noteSpawnY;
+    public float noteTapY;
+    public float noteDespawnY
+    { 
+        get
+        {  
+            return noteTapY - (noteSpawnY - noteTapY); 
+        }
+    }
+
+    public static MidiFile midiFile;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        Instance = this;
+        { 
+            ReadFromFile();
+        }
+    }
+
+    private void ReadFromFile()
+    {
+        midiFile = MidiFile.Read(Application.streamingAssetsPath + "/" + fileLocation);
+        GetDataFromMidi();
+    }
+
+    public void GetDataFromMidi()
+    {
+        var notes = midiFile.GetNotes();
+        var array = new Note[notes.Count];
+        notes.CopyTo(array, 0);
+
+        // further manip here
+
+        Invoke(nameof(StartSong), songDelayInSeconds);
+    }
+
+    private void StartSong()
+    {
+        audioSource.Play();
+    }
+
+    public static double GetAudioSourceTime()
+    {
+        return (double)Instance.audioSource.timeSamples / Instance.audioSource.clip.frequency;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

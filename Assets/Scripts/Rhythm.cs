@@ -6,8 +6,8 @@ public class Rhythm : MonoBehaviour
 {
     [Header("Prefabs / References")]
     public GameObject MusicNotePrefab;
-    public Transform Spawnpoint;
-    public Transform targetTransform;
+    public Transform[] Spawnpoints; // Assign all 4 spawnpoints in the Inspector
+    public Transform[] Targets;     // Assign corresponding targets for each lane
     public AudioSource musicSource;
 
     [Header("Song Settings")]
@@ -30,13 +30,11 @@ public class Rhythm : MonoBehaviour
 
         Debug.Log("Notes Loaded: " + notes.Length);
 
-        // IMPORTANT: normal play (no DSP scheduling)
         musicSource.Play();
     }
 
     void Update()
     {
-        // ✅ FIX: use actual audio playback time (prevents drift)
         SongPosition = musicSource.time;
 
         while (nextIndex < notes.Length &&
@@ -49,11 +47,13 @@ public class Rhythm : MonoBehaviour
 
     void SpawnNote(int index)
     {
-        GameObject note = Instantiate(MusicNotePrefab, Spawnpoint.position, Quaternion.identity);
+        int lane = Random.Range(0, Spawnpoints.Length);
+
+        GameObject note = Instantiate(MusicNotePrefab, Spawnpoints[lane].position, Quaternion.identity);
 
         MusicNotes noteScript = note.GetComponent<MusicNotes>();
         noteScript.HitTime = notes[index];
-        noteScript.target = targetTransform;
+        noteScript.target = Targets[lane];
         noteScript.noteTravelTime = noteTravelTime;
     }
 
@@ -80,7 +80,6 @@ public class Rhythm : MonoBehaviour
             if (parts.Length < 3) continue;
 
             int timeMs = int.Parse(parts[2]);
-
             float timeSec = timeMs / 1000f;
 
             noteTimes.Add(timeSec);

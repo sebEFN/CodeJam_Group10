@@ -5,5 +5,6 @@ using TMPro;
 public class DialogueData : ScriptableObject
 {
     public string guyName;
+    public Sprite guyImage;
     public string[] mainGuy;
 }

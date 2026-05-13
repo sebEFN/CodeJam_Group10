@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e10df6ee3b794ba91873a0aee9f3c359, type: 3}
-  m_Name: Kai
+  m_Name: Kai 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   guyName: Kai
   guyImage: {fileID: 7655384431173516710, guid: 2748ff420df251d438a613a845df5f80, type: 3}
@@ -28,3 +28,6 @@ MonoBehaviour:
   - 'Of course! But nobody has ever cleared it before therefore humanity is doomed '
   - " lowly human, i just told you that all the other humans couldn\u2019t defeat
     me! What do you bring to the table? "
+  - 'HA! Do you really think we would be done by just one battle? You have 2 more
+    battles before you can get home '
+  - Calling Aniba!

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e10df6ee3b794ba91873a0aee9f3c359, type: 3}
-  m_Name: Aniba
+  m_Name: Aniba 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   guyName: Aniba
   guyImage: {fileID: 551682216853623642, guid: 9ec86416b6278404f9dabd5bf4579384, type: 3}

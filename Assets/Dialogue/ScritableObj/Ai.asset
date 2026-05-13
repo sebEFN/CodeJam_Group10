@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Ai
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   guyName: Ai
+  guyImage: {fileID: -4668436313784537202, guid: 36ce5c0920a8eb148bc1c319b8e9c09b, type: 3}
   mainGuy:
   - "NO!! How did 1 silly man defeat us AI\u2019s! My XP bar is too low! "

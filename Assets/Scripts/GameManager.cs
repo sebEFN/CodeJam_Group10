@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     {
         if (!startPlaying)
         {
-            if (Input.anyKeyDown)
+            if (Input.anyKeyDown || Input.touchCount > 0)
             {
                 startPlaying = true;
                 theBS.hasStarted = true;

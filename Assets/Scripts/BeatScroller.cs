@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BeatScroller : MonoBehaviour
@@ -7,9 +8,11 @@ public class BeatScroller : MonoBehaviour
 
     public bool hasStarted;
 
+    public int scrollSpeed = (int)1u;
+
     void Start()
     {
-        beatTempo = beatTempo / 60f;
+        beatTempo = scrollSpeed;
     }
 
  

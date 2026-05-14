@@ -3,7 +3,6 @@ using UnityEngine;
 public class NoteObject : MonoBehaviour
 {
     public bool canBePressed;
-    public KeyCode keyToPress;
 
     void Start()
     {
@@ -20,9 +19,9 @@ public class NoteObject : MonoBehaviour
                 {
                     Vector3 worldPoint = Camera.main.ScreenToWorldPoint(t.position);
                     Collider2D hit = Physics2D.OverlapPoint(new Vector2(worldPoint.x, worldPoint.y));
-                    if (hit != null && canBePressed)
+                    if (hit != null && hit.gameObject == gameObject && canBePressed)
                     {
-                        gameObject.SetActive(false);
+                        Destroy(gameObject);
 
                         GameManager.instance.NoteHit();
                         return;

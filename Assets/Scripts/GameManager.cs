@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         TextMeshPro tmp = hitText.AddComponent<TextMeshPro>();
         tmp.font = TextFont;
         tmp.text = "HIT!";
-        tmp.fontSize = 2;
+        tmp.fontSize = 4;
         tmp.alignment = TextAlignmentOptions.Center;
         tmp.color = Color.green;
 
@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
         TextMeshPro tmp = missText.AddComponent<TextMeshPro>();
         tmp.font = TextFont;
         tmp.text = "MISS!";
-        tmp.fontSize = 2;
+        tmp.fontSize = 4;
         tmp.alignment = TextAlignmentOptions.Center;
         tmp.color = Color.red;
 

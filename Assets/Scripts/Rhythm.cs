@@ -122,8 +122,6 @@ public class Rhythm : MonoBehaviour
             if (parts.Length < 3)
                 continue;
 
-            // osu format:
-            // x,y,time,type,hitSound,...
 
             int xPos = int.Parse(parts[0]);
             int timeMs = int.Parse(parts[2]);
@@ -146,8 +144,6 @@ public class Rhythm : MonoBehaviour
 
     int GetLaneFromX(int x)
     {
-        // osu playfield width = 512
-        // 4 lane conversion
 
         if (x <= 154)
             return 0;

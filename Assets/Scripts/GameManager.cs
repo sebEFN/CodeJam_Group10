@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour
 
         Score = 0;
 
-        SetScoreText();
+        //SetScoreText();
     }
 
     // Update is called once per frame
@@ -54,16 +55,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void NoteHit()
-    {
-        Score += 100; 
-        StartCoroutine("SpawnHit");   
-
-        Debug.Log("Hit On Time");
+    { 
+        StartCoroutine("SpawnHit");
     }
      public void NoteMissed()
     {
-        Debug.Log("Missed Note");
-
         StartCoroutine("SpawnMiss");
     }
 
@@ -78,11 +74,20 @@ public class GameManager : MonoBehaviour
         TextMeshPro tmp = hitText.AddComponent<TextMeshPro>();
         tmp.font = TextFont;
         tmp.text = "HIT!";
-        tmp.fontSize = 5;
+        tmp.fontSize = 2;
         tmp.alignment = TextAlignmentOptions.Center;
         tmp.color = Color.green;
 
-        yield return new WaitForSeconds(0.5f);
+        float elapsed = 0f;
+        float duration = 0.5f;
+        Vector3 startPos = HitSpawn.position;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            hitText.transform.position = startPos + Vector3.up * elapsed;
+            yield return null;
+        }
         Destroy(hitText);
     }
 
@@ -94,11 +99,20 @@ public class GameManager : MonoBehaviour
         TextMeshPro tmp = missText.AddComponent<TextMeshPro>();
         tmp.font = TextFont;
         tmp.text = "MISS!";
-        tmp.fontSize = 5;
+        tmp.fontSize = 2;
         tmp.alignment = TextAlignmentOptions.Center;
         tmp.color = Color.red;
 
-        yield return new WaitForSeconds(0.5f);
+        float elapsed = 0f;
+        float duration = 0.5f;
+        Vector3 startPos = MissSpawn.position;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            missText.transform.position = startPos + Vector3.up * elapsed;
+            yield return null;
+        }
         Destroy(missText);
     }
 }

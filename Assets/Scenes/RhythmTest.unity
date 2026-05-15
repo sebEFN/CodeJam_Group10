@@ -289,6 +289,7 @@ MonoBehaviour:
   Score: 0
   Hitprefab: {fileID: 5849960670318843151, guid: 6f097d78826279b43b2e9486b5f66845, type: 3}
   Missprefab: {fileID: 5058189407182514377, guid: 56ea14009ef893b46bbe7412479488d1, type: 3}
+  TextFont: {fileID: 11400000, guid: 357b36914708fbf49a3f0d8aa9de44e2, type: 2}
 --- !u!1 &59911318
 GameObject:
   m_ObjectHideFlags: 0

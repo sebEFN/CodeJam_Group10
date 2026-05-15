@@ -38,7 +38,7 @@ public class Rhythm : MonoBehaviour
         Debug.Log("Notes Loaded: " + notes.Length);
 
         // IMPORTANT: normal play (no DSP scheduling)
-        //musicSource.Play();
+        musicSource.Play();
     }
 
     void Update()

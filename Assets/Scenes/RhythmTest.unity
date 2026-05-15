@@ -150,11 +150,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rhythm
   MusicNotePrefab: {fileID: 737317582436499319, guid: 012dd628bd8bcef4c864a694d18f5bb4, type: 3}
+  SongBpm: 140
+  noteTravelTime: 4
+  SecPerBeat: 0
+  SongPosition: 0
+  SongPositionInBeats: 0
+  dspSongTime: 0
+  beatsShownInAdvance: 6
+  musicSource: {fileID: 59911319}
   Spawnpoint: {fileID: 2043703555}
   targetTransform: {fileID: 132887718}
-  musicSource: {fileID: 59911319}
-  noteTravelTime: 4
-  SongPosition: 0
 --- !u!4 &22574508
 Transform:
   m_ObjectHideFlags: 0
@@ -406,7 +411,6 @@ GameObject:
   m_Component:
   - component: {fileID: 132887718}
   - component: {fileID: 132887719}
-  - component: {fileID: 132887720}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -488,52 +492,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!61 &132887720
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132887717}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.16, y: 0.16}
-  m_EdgeRadius: 0
 --- !u!1 &469165080
 GameObject:
   m_ObjectHideFlags: 0

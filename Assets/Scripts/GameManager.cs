@@ -1,7 +1,6 @@
 using JetBrains.Annotations;
 using UnityEngine;
 using TMPro;
-using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,14 +14,11 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
-    public Transform HitSpawn;
-    public Transform MissSpawn;
-
     public int Score;
 
-    public GameObject Hitprefab;
-    public GameObject Missprefab;
-    public TMP_FontAsset TextFont;
+    public TextMeshProUGUI Hit;
+
+    public TextMeshProUGUI Miss;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -55,50 +51,12 @@ public class GameManager : MonoBehaviour
 
     public void NoteHit()
     {
-        Score += 100; 
-        StartCoroutine("SpawnHit");   
+        Score += 100;    
 
         Debug.Log("Hit On Time");
     }
      public void NoteMissed()
     {
         Debug.Log("Missed Note");
-
-        StartCoroutine("SpawnMiss");
-    }
-
-    public IEnumerator SpawnHit()
-    {
-        Score += 100;
-        SetScoreText();
-
-        GameObject hitText = new GameObject("HitText");
-        hitText.transform.position = HitSpawn.position;
-
-        TextMeshPro tmp = hitText.AddComponent<TextMeshPro>();
-        tmp.font = TextFont;
-        tmp.text = "HIT!";
-        tmp.fontSize = 5;
-        tmp.alignment = TextAlignmentOptions.Center;
-        tmp.color = Color.green;
-
-        yield return new WaitForSeconds(0.5f);
-        Destroy(hitText);
-    }
-
-    public IEnumerator SpawnMiss()
-    {
-        GameObject missText = new GameObject("MissText");
-        missText.transform.position = MissSpawn.position;
-
-        TextMeshPro tmp = missText.AddComponent<TextMeshPro>();
-        tmp.font = TextFont;
-        tmp.text = "MISS!";
-        tmp.fontSize = 5;
-        tmp.alignment = TextAlignmentOptions.Center;
-        tmp.color = Color.red;
-
-        yield return new WaitForSeconds(0.5f);
-        Destroy(missText);
     }
 }

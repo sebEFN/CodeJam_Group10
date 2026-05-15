@@ -13,8 +13,6 @@ public class MusicNotes : MonoBehaviour
 
     void Start()
     {
-        //rhythm = FindObjectOfType<Rhythm>();
-
         rhythm = Rhythm.instance;
 
         spawnPos = transform.position;

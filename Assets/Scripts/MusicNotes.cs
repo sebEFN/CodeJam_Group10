@@ -13,16 +13,10 @@ public class MusicNotes : MonoBehaviour
 
     void Start()
     {
-        //rhythm = FindObjectOfType<Rhythm>();
-
-        rhythm = Rhythm.instance;
+        rhythm = FindObjectOfType<Rhythm>();
 
         spawnPos = transform.position;
         targetPos = target.position;
-
-        if (target != null)
-            targetPos = target.position;
-
     }
 
     void Update()
@@ -34,17 +28,13 @@ public class MusicNotes : MonoBehaviour
         float progress = (songTime - spawnTime) / noteTravelTime;
         progress = Mathf.Clamp01(progress);
 
-        /*if (target != null)
-            targetPos = target.position;*/
+        if (target != null)
+            targetPos = target.position;
 
         transform.position = Vector3.Lerp(spawnPos, targetPos, progress);
 
         if (songTime > HitTime + 0.5f)
         {
-            if (GetComponent<NoteObject>().canBePressed)
-            {
-                GameManager.instance.NoteMissed();
-            }
             Destroy(gameObject);
         }
     }

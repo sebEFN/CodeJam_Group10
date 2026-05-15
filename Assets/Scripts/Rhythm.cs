@@ -19,13 +19,6 @@ public class Rhythm : MonoBehaviour
     private float[] notes;
     private int nextIndex = 0;
 
-    public static Rhythm instance;
-
-    void Awake()
-    {
-        instance = this;
-    }
-    
     void Start()
     {
         musicSource = GetComponent<AudioSource>();

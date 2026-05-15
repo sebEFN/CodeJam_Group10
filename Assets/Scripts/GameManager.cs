@@ -20,9 +20,6 @@ public class GameManager : MonoBehaviour
     public Transform MissSpawn;
 
     public int Score;
-
-    public GameObject Hitprefab;
-    public GameObject Missprefab;
     public TMP_FontAsset TextFont;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,7 +29,7 @@ public class GameManager : MonoBehaviour
 
         Score = 0;
 
-        //SetScoreText();
+        SetScoreText();
     }
 
     // Update is called once per frame

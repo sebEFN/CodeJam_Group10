@@ -4,10 +4,22 @@ using System.Collections.Generic;
 
 public class Rhythm : MonoBehaviour
 {
+    [System.Serializable]
+    public class NoteData
+    {
+        public float time;
+        public int lane;
+    }
+
     [Header("Prefabs / References")]
     public GameObject MusicNotePrefab;
-    public Transform Spawnpoint;
-    public Transform targetTransform;
+
+    [Header("Lane Spawn Points")]
+    public Transform[] laneSpawnPoints;
+
+    [Header("Lane Targets")]
+    public Transform[] laneTargets;
+
     public AudioSource musicSource;
 
     [Header("Song Settings")]
@@ -16,7 +28,7 @@ public class Rhythm : MonoBehaviour
     [Header("Debug")]
     public float SongPosition;
 
-    private float[] notes;
+    private NoteData[] notes;
     private int nextIndex = 0;
 
     public static Rhythm instance;
@@ -25,7 +37,7 @@ public class Rhythm : MonoBehaviour
     {
         instance = this;
     }
-    
+
     void Start()
     {
         musicSource = GetComponent<AudioSource>();
@@ -37,17 +49,20 @@ public class Rhythm : MonoBehaviour
 
         Debug.Log("Notes Loaded: " + notes.Length);
 
-        // IMPORTANT: normal play (no DSP scheduling)
-        //musicSource.Play();
+        // Start music
+        musicSource.Play();
     }
 
     void Update()
     {
-        // ✅ FIX: use actual audio playback time (prevents drift)
+        // Current song time
         SongPosition = musicSource.time;
 
-        while (nextIndex < notes.Length &&
-               SongPosition >= notes[nextIndex] - noteTravelTime)
+        // Spawn notes early enough to reach target on beat
+        while (
+            nextIndex < notes.Length &&
+            SongPosition >= notes[nextIndex].time - noteTravelTime
+        )
         {
             SpawnNote(nextIndex);
             nextIndex++;
@@ -56,17 +71,34 @@ public class Rhythm : MonoBehaviour
 
     void SpawnNote(int index)
     {
-        GameObject note = Instantiate(MusicNotePrefab, Spawnpoint.position, Quaternion.identity);
+        NoteData noteData = notes[index];
+
+        int lane = noteData.lane;
+
+        // Safety check
+        if (lane < 0 || lane >= laneSpawnPoints.Length)
+        {
+            Debug.LogWarning("Invalid lane: " + lane);
+            return;
+        }
+
+        GameObject note = Instantiate(
+            MusicNotePrefab,
+            laneSpawnPoints[lane].position,
+            Quaternion.identity
+        );
 
         MusicNotes noteScript = note.GetComponent<MusicNotes>();
-        noteScript.HitTime = notes[index];
-        noteScript.target = targetTransform;
+
+        noteScript.HitTime = noteData.time;
+        noteScript.target = laneTargets[lane];
         noteScript.noteTravelTime = noteTravelTime;
     }
 
-    float[] LoadOsuNotes(string path)
+    NoteData[] LoadOsuNotes(string path)
     {
-        List<float> noteTimes = new List<float>();
+        List<NoteData> noteList = new List<NoteData>();
+
         string[] lines = File.ReadAllLines(path);
 
         bool inHitObjects = false;
@@ -79,20 +111,53 @@ public class Rhythm : MonoBehaviour
                 continue;
             }
 
-            if (!inHitObjects) continue;
-            if (string.IsNullOrWhiteSpace(line)) continue;
+            if (!inHitObjects)
+                continue;
+
+            if (string.IsNullOrWhiteSpace(line))
+                continue;
 
             string[] parts = line.Split(',');
 
-            if (parts.Length < 3) continue;
+            if (parts.Length < 3)
+                continue;
 
+            // osu format:
+            // x,y,time,type,hitSound,...
+
+            int xPos = int.Parse(parts[0]);
             int timeMs = int.Parse(parts[2]);
 
             float timeSec = timeMs / 1000f;
 
-            noteTimes.Add(timeSec);
+            int lane = GetLaneFromX(xPos);
+
+            NoteData note = new NoteData
+            {
+                time = timeSec,
+                lane = lane
+            };
+            Debug.Log("xPos: " + xPos + " -> Lane: " + lane);
+            noteList.Add(note);
         }
 
-        return noteTimes.ToArray();
+        return noteList.ToArray();
+    }
+
+    int GetLaneFromX(int x)
+    {
+        // osu playfield width = 512
+        // 4 lane conversion
+
+        if (x <= 154)
+            return 0;
+
+        if (x <= 256)
+            return 1;
+
+        if (x <= 384)
+            return 2;
+
+        return 3;
     }
 }

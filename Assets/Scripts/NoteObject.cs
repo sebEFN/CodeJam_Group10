@@ -24,7 +24,6 @@ public class NoteObject : MonoBehaviour
                         Destroy(gameObject);
 
                         GameManager.instance.NoteHit();
-                        GameManager.instance.SetScoreText();    
                         return;
                     }
                 }

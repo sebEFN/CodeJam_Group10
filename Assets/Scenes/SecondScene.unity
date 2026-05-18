@@ -473,7 +473,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1613904291
-  m_SortingLayer: -1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 689283645380311244, guid: cbd45cc89dec1624a8341cb53c79dae9, type: 3}
@@ -1613,6 +1613,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1841895195}
+        m_TargetAssemblyTypeName: ShakePic, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &844735591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1926,6 +1938,18 @@ MonoBehaviour:
       - m_Target: {fileID: 97590740}
         m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
         m_MethodName: KaiDiaTwo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1841895195}
+        m_TargetAssemblyTypeName: ShakePic, Assembly-CSharp
+        m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2358,6 +2382,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1841895195}
+        m_TargetAssemblyTypeName: ShakePic, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2877,6 +2913,7 @@ GameObject:
   - component: {fileID: 1841895193}
   - component: {fileID: 1841895192}
   - component: {fileID: 1841895191}
+  - component: {fileID: 1841895195}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2970,6 +3007,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1841895195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841895190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b089f1dbf5f59409214f141cd8020f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShakePic
+  character1: {fileID: 708090016}
+  character2: {fileID: 417979601}
+  character3: {fileID: 836250131}
 --- !u!1 &1981348836
 GameObject:
   m_ObjectHideFlags: 0

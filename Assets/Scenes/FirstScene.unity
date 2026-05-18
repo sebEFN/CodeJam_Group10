@@ -215,7 +215,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1613904291
-  m_SortingLayer: -1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 689283645380311244, guid: cbd45cc89dec1624a8341cb53c79dae9, type: 3}
@@ -352,6 +352,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1887254907}
         m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
         m_MethodName: KaiDia
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1298172205}
+        m_TargetAssemblyTypeName: ShakePic, Assembly-CSharp
+        m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -508,6 +520,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2020918650}
         m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
         m_MethodName: MainGuydia
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1298172205}
+        m_TargetAssemblyTypeName: ShakePic, Assembly-CSharp
+        m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -748,7 +772,7 @@ RectTransform:
   m_GameObject: {fileID: 540606523}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.35, y: 3.35, z: 3.35}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1421483141}
@@ -823,7 +847,7 @@ RectTransform:
   m_GameObject: {fileID: 760202863}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.35, y: 3.35, z: 3.35}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1084571166}
@@ -1265,6 +1289,7 @@ GameObject:
   - component: {fileID: 1298172203}
   - component: {fileID: 1298172202}
   - component: {fileID: 1298172201}
+  - component: {fileID: 1298172205}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1357,6 +1382,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1298172205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298172200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b089f1dbf5f59409214f141cd8020f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShakePic
+  character1: {fileID: 760202864}
+  character2: {fileID: 540606524}
 --- !u!1 &1319693725
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,6 +2253,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1298172205}
+        m_TargetAssemblyTypeName: ShakePic, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

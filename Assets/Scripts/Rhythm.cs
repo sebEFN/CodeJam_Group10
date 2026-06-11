@@ -23,8 +23,8 @@ public class Rhythm : MonoBehaviour
     {
         musicSource = GetComponent<AudioSource>();
 
-        string path = Path.Combine(Application.dataPath, "Resources/GameJamFinal.osu");
-        path = path.Replace("/", "\\");
+        string path = Path.Combine(Application.dataPath, "Resources\\GameJamFinal.osu");
+        
 
         notes = LoadOsuNotes(path);
 
@@ -49,7 +49,21 @@ public class Rhythm : MonoBehaviour
 
     void SpawnNote(int index)
     {
+<<<<<<< Updated upstream
         GameObject note = Instantiate(MusicNotePrefab, Spawnpoint.position, Quaternion.identity);
+=======
+        NoteData noteData = notes[index];
+
+        int lane = noteData.lane;
+
+    
+
+        GameObject note = Instantiate(
+            MusicNotePrefab,
+            laneSpawnPoints[lane].position,
+            Quaternion.identity
+        );
+>>>>>>> Stashed changes
 
         MusicNotes noteScript = note.GetComponent<MusicNotes>();
         noteScript.HitTime = notes[index];

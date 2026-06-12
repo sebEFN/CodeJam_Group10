@@ -75,12 +75,7 @@ public class Rhythm : MonoBehaviour
 
         int lane = noteData.lane;
 
-        // Safety check
-        if (lane < 0 || lane >= laneSpawnPoints.Length)
-        {
-            Debug.LogWarning("Invalid lane: " + lane);
-            return;
-        }
+    
 
         GameObject note = Instantiate(
             MusicNotePrefab,
